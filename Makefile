@@ -13,7 +13,7 @@ OBJ_FILES = $(SRC_FILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 HEADER_FILES = $(shell find $(SRC_DIR) -name "*.h")
 
 # Target executable
-TARGET = $(BIN_DIR)/TLA
+TARGET = $(BIN_DIR)/TLR
 
 # Create necessary directories if they don't exist
 $(shell mkdir -p $(OBJ_DIR) $(BIN_DIR))
