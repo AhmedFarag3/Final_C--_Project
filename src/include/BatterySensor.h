@@ -1,13 +1,14 @@
 #ifndef __BATTERYSENSOR__H__
 #define __BATTERYSENSOR__H__
-#include <cstdint>
+
+#include "../Factory/Isensor.h"
 
 namespace Sensors
 {   
-    class BatterySensor{
+    class BatterySensor : public ISensor {
 
             public:
-            float getValue() const;
+            float getValue() override;
 
     };
 

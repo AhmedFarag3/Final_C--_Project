@@ -4,8 +4,10 @@
 namespace Sensors
 {
 
-        float RadarSensor::getValue() const
+        float RadarSensor::getValue() 
         {
-        return  rand() % 2 ;
+                // Seed the random number generator using the current time
+                srand(static_cast<unsigned int>(time(0)));
+                return  rand() % 2 ;
         }
 }

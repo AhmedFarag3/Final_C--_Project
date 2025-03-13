@@ -1,14 +1,14 @@
 #ifndef __TEMPERATURESENSOR__H__
 #define __TEMPERATURESENSOR__H__
 
-#include<cstdint>
+#include "../Factory/Isensor.h"
 
 namespace Sensors
 {
-    class TemperatureSensor
+    class TemperatureSensor: public ISensor
     {
         public:
-        float getValue() const;
+        float getValue() override;
     };
 }
 

@@ -1,14 +1,16 @@
 #ifndef __RADARSENSOR__H__
 #define __RADARSENSOR__H__
 
+#include "../Factory/Isensor.h"
+
 namespace Sensors
 {
     
 
-    class RadarSensor
+    class RadarSensor:public ISensor
     {
         public:
-        float getValue() const;
+        float getValue() override;
     };
 }
 

@@ -1,23 +1,22 @@
-#include "./include/BatterySensor.h"
-#include "./include/RadarSensor.h"
-#include "./include/SpeedSensor.h"
-#include "./include/TemperatureSensor.h"
+
+#include "./Factory/IFactorySensor.h"
 
 #include <iostream>
 int main()
 {
 
-    Sensors::BatterySensor batterysensor;
-    std::cout << "Battery Percentage : " << batterysensor.getValue()<<"%"<<std::endl;
+    ISensor * sensor = IFactorySensor::CreateSensor("SpeedSensor");
 
-    Sensors::RadarSensor radarsensor;
-    std::cout << "Radar state : " << radarsensor.getValue()<<std::endl;
+    if(sensor)
+    {
+        std::cout<<"Sensor Data : " << sensor->getValue()<<std::endl;
+        delete sensor ;
+    }
+    else 
+    {
+        std::cerr << "Error: Sensor type not recongnized" <<std::endl;
+    }
 
-    Sensors::SpeedSensor speedsensor;
-    std::cout << "Car Speed   : " << speedsensor.getValue()<<" km/h"<<std::endl;
-
-    Sensors::TemperatureSensor temperaturesensor;
-    std::cout << "Temperature sensor :" << temperaturesensor.getValue()<<" C"<<std::endl;
 
     return 0;
 }
