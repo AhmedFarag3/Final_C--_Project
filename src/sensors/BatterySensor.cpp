@@ -4,14 +4,8 @@
 
 namespace Sensors
 {
-    BatterySensor::BatterySensor(u_int8_t BatteryPercentage):m_BatteryPercentage(BatteryPercentage){};
-
-    void BatterySensor::setValue(u_int8_t newValue)
+    float BatterySensor::getValue() const
     {
-        m_BatteryPercentage = newValue;
-    }
-    double BatterySensor::getValue() const
-    {
-        return m_BatteryPercentage;
+        return  20 + rand() % 80 ;
     }
 }

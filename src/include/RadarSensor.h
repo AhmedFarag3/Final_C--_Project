@@ -3,14 +3,12 @@
 
 namespace Sensors
 {
+    
+
     class RadarSensor
     {
-        private:
-        bool m_RadarState;
         public:
-        RadarSensor(bool RadarState);
-        void setValue(bool NewRadarState);
-        bool getValue() const;
+        float getValue() const;
     };
 }
 

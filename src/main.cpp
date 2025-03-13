@@ -7,10 +7,17 @@
 int main()
 {
 
-    Sensors::TemperatureSensor temperaturesensor(50.9);
-    std::cout<<temperaturesensor.getValue()<<std::endl;
-    temperaturesensor.setValue(20);
-    std::cout<<temperaturesensor.getValue()<<std::endl;
+    Sensors::BatterySensor batterysensor;
+    std::cout << "Battery Percentage : " << batterysensor.getValue()<<"%"<<std::endl;
+
+    Sensors::RadarSensor radarsensor;
+    std::cout << "Radar state : " << radarsensor.getValue()<<std::endl;
+
+    Sensors::SpeedSensor speedsensor;
+    std::cout << "Car Speed   : " << speedsensor.getValue()<<" km/h"<<std::endl;
+
+    Sensors::TemperatureSensor temperaturesensor;
+    std::cout << "Temperature sensor :" << temperaturesensor.getValue()<<" C"<<std::endl;
 
     return 0;
 }

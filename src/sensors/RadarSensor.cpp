@@ -1,15 +1,11 @@
 #include"../include/RadarSensor.h"
+#include<iostream>
 
 namespace Sensors
 {
-        RadarSensor::RadarSensor(bool RadarState) : m_RadarState(RadarState){};
 
-        void RadarSensor::setValue(bool NewRadarState)
+        float RadarSensor::getValue() const
         {
-            m_RadarState = NewRadarState;
-        }
-        bool RadarSensor::getValue() const
-        {
-            return m_RadarState;
+        return  rand() % 2 ;
         }
 }

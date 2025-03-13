@@ -1,15 +1,12 @@
 #include"../include/SpeedSensor.h"
+#include<iostream>
 
 namespace Sensors
 {
-        SpeedSensor::SpeedSensor(){};
-        void SpeedSensor::setValue(uint16_t NewSpeed)
+
+        float SpeedSensor::getValue() const
         {
-            m_Speed = NewSpeed;
-        }
-        uint16_t SpeedSensor::getValue() const
-        {
-            return m_Speed;
+            return  20 + rand() % 300 ; 
         }
 
 }

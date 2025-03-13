@@ -1,14 +1,11 @@
 #include"../include/TemperatureSensor.h"
+#include<iostream>
 
 namespace Sensors
 {
-        TemperatureSensor::TemperatureSensor(double Temperature):m_Temperature(Temperature){};
-        void TemperatureSensor::setValue(double NewTemperature)
+
+        float TemperatureSensor::getValue() const
         {
-            m_Temperature = NewTemperature;
-        }
-        double TemperatureSensor::getValue() const
-        {
-            return m_Temperature;
+            return  20 + rand() % 100 ;
         }
 }
