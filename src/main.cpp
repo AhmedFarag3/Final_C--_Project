@@ -1,8 +1,7 @@
 
 #include "./Factory/IFactorySensor.h"
+#include "./Logger/Logger.h"
 
-#include <iostream>
-#include <memory>
 #include <thread> 
 #include <chrono>  
 
@@ -15,6 +14,9 @@ int main()
     std::unique_ptr<ISensor> sensor_2(IFactorySensor::CreateSensor("RadarSensor"));
     std::unique_ptr<ISensor> sensor_3(IFactorySensor::CreateSensor("SpeedSensor"));
     std::unique_ptr<ISensor> sensor_4(IFactorySensor::CreateSensor("TemperatureSensor"));
+
+    std::shared_ptr<Logger> logger (Logger::GetInstance());
+    logger->log("This is a test Log message");
 
     if(!sensor_1 && !sensor_2 && !sensor_3 && !sensor_4)
     {
