@@ -31,7 +31,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADER_FILES)
 
 # Clean object files and the executable
 clean:
-	rm -rf $(OBJ_DIR)/*.o $(TARGET)
+	rm -rf $(OBJ_DIR)/*/*.o $(TARGET) log.txt
 
 # Run the executable
 run: $(TARGET)

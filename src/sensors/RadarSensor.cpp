@@ -6,6 +6,6 @@ namespace Sensors
 
         float RadarSensor::getValue() 
         {
-                return  rand() % 2 ;
+                return  50 + rand() % 400 ;
         }
 }
